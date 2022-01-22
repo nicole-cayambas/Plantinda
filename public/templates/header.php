@@ -31,4 +31,4 @@
             </a>
         </nav>
     </header>
-    <div id="root">
+    <div id="main">
