@@ -10,7 +10,7 @@
 <body>
     <header>
         <div id="logo">
-            <h1>plantinda</h1>
+            <a href="index.php"><h1>plantinda</h1></a>
         </div>
         <div id="search-container">
             <input id="search-input" type="text" placeholder="What are you looking for?">
@@ -26,7 +26,7 @@
             <a href="orders.php"> 
                 <img src="image/Icon- Document.png" alt="Orders" width="22px" height="22px">
             </a>
-            <a href="profile.php"> 
+            <a href="profile.php">
                 <img src="image/Icon- User.png" alt="Profile" width="25px" height="25px">
             </a>
         </nav>
