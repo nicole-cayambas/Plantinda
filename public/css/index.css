@@ -18,7 +18,7 @@ header {
     margin-right: 5vw;
     transition: 0.2s;
 }
-nav, a, img {
+nav, .a-center, img {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -74,6 +74,17 @@ footer li{
     list-style-type: none;
 }
 #main {
+    display: flex;
+    flex-wrap: wrap;
     margin: 25px 35px;
     min-height: 85vh;
+    display: flex;
+}
+.grey-text {
+    color: #7D7D7D;
+}
+.inline {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
