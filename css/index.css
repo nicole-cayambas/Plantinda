@@ -35,7 +35,7 @@ nav > a {
 nav > a:hover, #logo:hover {
     filter: drop-shadow(0 0 10px rgb(0, 0, 0));
 }
-#search-container {
+#search-container, #search-container > form {
     width: 100%;
     background-color: #E7E7E7;
     border-radius: 15px;

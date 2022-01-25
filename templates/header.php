@@ -1,3 +1,8 @@
+<?php
+
+require "db/config.php";
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,8 +18,10 @@
             <a href="index.php" class="a-center"><h1>plantinda</h1></a>
         </div>
         <div id="search-container">
-            <input id="search-input" type="text" placeholder="What are you looking for?">
-            <a href="" id="searchBtn" class="a-center"><img src="image/Icon- Search.png" alt="Search"></a>
+            <form action="search.php" method="post">
+                <input id="search-input" type="text" placeholder="What are you looking for?">
+                <a href="" id="searchBtn" class="a-center"><img src="image/Icon- Search.png" alt="Search"></a>
+            </form>
         </div>
         <nav>
             <a href="wishlist.php" class="a-center"> 
