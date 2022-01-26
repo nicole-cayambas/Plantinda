@@ -1,8 +1,4 @@
-<?php
-
-require "db/config.php";
-
-?>
+<?php require "db/config.php";?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
