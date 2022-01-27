@@ -1,0 +1,9 @@
+.btn-neutral {
+    width: fit-content;
+    padding: 5px;
+    border: 2px solid black;
+}
+.btn-neutral:active {
+    background-color: black;
+    color: white;
+}

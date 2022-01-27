@@ -1,8 +1,9 @@
 <?php 
 include "templates/header.php"; 
 
-$sql = "select * from product";
-$products = $db->query($sql);
+
+$productsQuery = "select * from product";
+$products = $db->query($productsQuery);
 
 include "components/filter-search.php"; 
 include "components/filter.php"; 

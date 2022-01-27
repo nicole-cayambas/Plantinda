@@ -1,20 +1,27 @@
+:root {
+    --product-summary-width: 380px;
+    --product-pic-min-width: 250px;
+    --wrap: 800px;
+  }
 .selected-product-wrap {
-    width: 60vw;
-    /* display: flex; */
-
-    
+    width: var(--wrap);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 .selected-product {
     width: 100%;
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
     flex-wrap: wrap;
-    /* background-color: rgb(219, 197, 240); */
     gap: 30px;
 }
 .selected-product-pic {
-    width: 50%;
-    height: auto;
+    max-width: var(--product-summary-width);
+    min-width: var(--product-pic-min-width);
+    max-height: var(--product-summary-width);
+    min-height: var(--product-pic-min-width);
     border-radius: 30px;
     box-shadow: 0 0px 10px 1px rgba(0, 0, 0, 0.274);
 }
@@ -24,23 +31,62 @@
     border-radius: 30px;
 }
 .selected-product-summary {
-    width: 40%;
+    max-width: var(--product-summary-width);
+    min-width: var(--product-pic-min-width);
+    max-height: var(--product-summary-width);
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
     gap: 10px 0;
 }
 .selected-product-summary > .rating {
     display: flex;
     gap: 10px;
 }
-.space-between {
-    justify-content: space-between;
-}
 #price-ranges {
     display: flex;
-    flex-direction: column;
-    /* flex-wrap: row wrap; */
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-around;
 }
-.min-order {
+#price-ranges input[type="radio"] {
+    display: none;
+    cursor: pointer;
+}
+#price-ranges label {
+    width: 150px;
+    padding: 10px;
+    cursor: pointer;
+    display: block;
+    border: 2px solid hsla(150, 75%, 50%, 1);
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0px 3px 5px -2px hsla(150, 5%, 65%, 0.5);
+}
+#price-ranges input[type="radio"]:checked + label{
+    background: hsla(150, 75%, 50%, 1);
+    box-shadow: 0px 0px 10px hsla(150, 100%, 50%, 0.75);
+}
+#price-ranges p {
     color: #11601D;
+}
+.selected-product-pic-roll {
+    width: 100%;
+    display: flex;
+    gap: 15px;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.selected-product-pic-roll > div {
+    background-color: rgb(216, 216, 216);
+    width: 80px;
+    height: 80px;
+    border-radius: 12px;
+}
+.elected-product-details-wrap {
+    display: flex;
+}
+.normal-weight {
+    font-weight: normal;
 }
