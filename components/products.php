@@ -2,6 +2,8 @@
 
 <section class="products-section">
 <?php while($product = $products->fetch_assoc()): ?>
-    <?php include "templates/product-card.php"; ?>
+    <?php 
+        include "templates/product-card.php"; 
+        ?>
 <?php endwhile; ?>
 </section>

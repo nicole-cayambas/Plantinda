@@ -1,5 +1,4 @@
-<?php include 'templates/header.php';
-?>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 <div class="container" style="max-width: 500px;">
     <form action="validation.php" method="POST" style="margin-top: 70px;">
         <h1 style="text-align: center;">Login</h1>
@@ -15,4 +14,3 @@
     <a href="signup.php" class="btn btn-outline-primary btn-sm btn-block">Sign Up</a>
     </form>
 </div>
-<?php include 'templates/footer.php';?>

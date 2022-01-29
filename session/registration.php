@@ -14,7 +14,13 @@
     } else {
         $reg = "insert into users(username, password, firstName, lastName, email, phoneNumber, userType) values ('$username', '$password', '$firstName', '$lastName', '$email', '$phoneNumber', '$userType')";
         $db->query($reg);
-        echo '<script>alert("Signup Successful")</script>';
+        if($userType=='seller'){
+            $reg2 = "insert into sellers(username) values ('$username')";
+            $db->query($reg2);
+        } else if($userType=='buyer'){
+            $reg2 = "insert into buyers(username) values ('$username')";
+            $db->query($reg2);
+        }
         header('location: login.php');
     }
 ?>

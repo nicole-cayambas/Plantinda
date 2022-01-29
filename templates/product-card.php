@@ -1,11 +1,11 @@
 
 <link rel="stylesheet" href="css/product-card.css">
 <div class="product-card">
-    <a href="product.php" class="product-card-link">
+    <a href="product.php?id=<?php echo $product['id'] ?>">
         <img src="<?php echo $product['picture'];?>" alt="product-picture" class="product-pic" width="280px" height="280px">
     </a>
     <div class="product-details">
-        <a href="product.php" class="product-card-link">
+        <a href="product.php?id=<?php echo $product['id'] ?>" class="product-card-link">
             <h3 class="product-title"><?php echo $product['name'];?></h3>
         </a>
         <div class="rating inline">
