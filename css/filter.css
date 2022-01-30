@@ -1,11 +1,10 @@
 .filter {
   border-right: 1px solid #E7E7E7;
     flex: 1;
-    padding: 10px;
+    /* padding: 10px; */
     display: flex;
     flex-direction: column;
     row-gap: 30px;
-    /* background-color: green; */
 }
 .filter-categories {
     display: flex;
