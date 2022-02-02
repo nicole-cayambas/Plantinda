@@ -17,7 +17,13 @@
             <?php } ?>
         </div>
         <div class="price-range inline">
-            <h3 class="price-range">Php <?php echo $product['min-price'];?> - Php <?php echo $product['max-price'];?></h3>
+            <?php  
+                $prices = [];
+                array_push($prices, $product['price_range_1'], $product['price_range_2'], $product['price_range_3'], $product['price_range_4']);
+                $minPrice = min($prices);
+                $maxPrice = max($prices);
+            ?>
+            <h3 class="price-range">Php <?php echo $minPrice;?> - Php <?php echo $maxPrice;?></h3>
             <a href=""><img src="image/Icon- Heart.png" alt="Add to wishlist"></a>
         </div>
         <p class="min-order">Min order: <?php echo $product['min-order'];?> pc</p>

@@ -16,7 +16,6 @@
 }
 .product-main {
     flex: 2.5;
-    height: fit-content;
     flex-direction: column;
     gap: 30px;
 }
@@ -27,7 +26,7 @@
 }
 .prod-pic-wrap {
     flex: 1;
-    height: auto;
+    height: 100%;
 }
 .prod-pic-wrap > img {
     height: 100%;
@@ -37,8 +36,9 @@
     border-radius: 30px;
 }
 .prod-summary {
-    flex: 1;
+    flex: 1.5;
     flex-direction: column;
+    gap: 20px;
     justify-content: space-around;
 }
 #price-ranges {
@@ -164,7 +164,11 @@
     background-color: grey;
 }
 
-
+@media only screen and (max-width:1300px){
+    #price-ranges label {
+        width: 160px;
+    }
+}
 
 @media only screen and (max-width: 1000px) {
     .product-page {
@@ -177,8 +181,10 @@
 }
 
 @media only screen and (max-width: 500px) {
-    .side, .product-main, .product-overview, .seller-card {
-        width: 90vw;
+    .product-page {
+        width: 100vw;
+        flex-direction: column;
+        margin: 0 5%;
     }
     .product-overview {
         flex-direction: column;
@@ -205,13 +211,22 @@
     justify-content: space-between;
     align-items: center;
 }
+button {
+    border: none;
+    cursor: pointer;
+    background-color: white;
+}
 .btn {
     cursor: pointer;
     width: 100%;
     text-align: center;
     border: 1px solid black;
     border-radius: 12px;
+    font-size: medium;
     padding: 10px;
+}
+.btn-outline {
+    background-color: #C5D2C8;
 }
 .btn-black {
     background-color: black;

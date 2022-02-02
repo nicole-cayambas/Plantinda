@@ -12,25 +12,51 @@
     </div>
     <hr>
     <br>
-    <label for="prod-check">
-        <div class="product-card">
-            <div class="product">
-            <input type="checkbox" id="prod-check">
-                <img src="image/product/plant.png" width="120px" height="120px" style="border-radius:12px;">
-                <div style="margin-top: 20px;">
-                    <p style="color:#555555;">thisSeller</p>
-                    <h3 class="normal-weight">Plant Name</h3>
+    <?php 
+    if(!isset($_SESSION['username'])){
+        echo '<script>alert("Log In needed")</script>';
+        header('location:session/login.php');
+    } else {
+        $user_id = $_SESSION['id'];
+        $query = "select * from cart where user_id='$user_id'";
+        $carts = $db->query($query);
+        while($cart = $carts->fetch_assoc()){
+            $product_id = $cart['product_id'];
+            $productQuery = "select * from product where id='$product_id'";
+            $products = $db->query($productQuery);?>
+            <?php while($product = $products->fetch_assoc()):?>
+            <label>
+                <div class="product-card">
+                    <div class="product" id="">
+                    <input type="checkbox">
+                        <img src="<?php echo $product['picture']; ?>" width="120px" height="120px" style="border-radius:12px;">
+                        <div style="margin-top: 20px;">
+                        <?php 
+                        $seller_id = $product['seller_id'];
+                        $sellerQuery = "select * from sellers where id='$seller_id'";
+                        $seller = $db->query($sellerQuery);
+                        $seller = $seller->fetch_assoc();
+                        $seller_name = $seller['username'];
+                        ?>
+                            <p style="color:#555555;"><?php echo $seller_name; ?></p>
+                            <h3 class="normal-weight"><?php echo $product['name']; ?></h3>
+                        </div>
+                    </div>
+                    <p class="align"><?php echo $cart['unit_price']; ?></p>
+                    <p class="align"><?php echo $cart['quantity']; ?></p>
+                    <p class="align totalPrice"><?php echo $cart['quantity'] * $cart['unit_price']; ?></p>
+                    <a href="" class="align-small btn">Delete</a>
                 </div>
-            </div>
-            <p class="align">Php 50</p>
-            <p class="align">3</p>
-            <p class="align">Php 150</p>
-            <a href="" class="align-small btn">Delete</a>
-        </div>
-    </label>
+            </label>
+            <?php endwhile; ?>
+        <?php }
+    }?>
+    
+    
     <div class="product-card green">
         <a href="" style="text-decoration:underline;">Delete All</a>
-        <h2>Total: Php 150.00</h2>
+        <h2 id="sumPrice"></h2>
         <btn type="submit" class="btn">Check Out</a>
     </div>
 </form>
+<script src="js/cart.js"></script>

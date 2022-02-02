@@ -11,6 +11,6 @@
         © Plantinda 2022
         </div>
     </footer>
-    <script src="index.js"></script>
+    <script src="js/index.js"></script>
 </body>
 </html>

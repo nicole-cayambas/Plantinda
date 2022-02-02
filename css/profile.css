@@ -1,9 +1,52 @@
+#profile-wrap, .profile-info, .form-control {
+    display: flex;
+    gap: 20px;
+}
+
+#profile-wrap {
+    flex-direction: column;
+    width: 100%;
+    align-items: stretch;
+}
+.profile-info {
+}
+.btn-small {
+    width: fit-content;
+    padding: 5px;
+    background-color: rgba(255, 255, 255, 0);
+    font-size: medium;
+    border: none;
+    cursor: pointer;
+    text-decoration: underline;
+    color: rgb(92, 92, 92);
+}
 .btn-neutral {
     width: fit-content;
     padding: 5px;
-    border: 2px solid black;
+    border: 2px solid rgb(170, 170, 170);
 }
 .btn-neutral:active {
     background-color: black;
     color: white;
+}
+.profile-info {
+    flex-direction: column;
+}
+.form-control {
+    width: 100%;
+    align-items: center;
+}
+.form-control > label {
+    flex: 2;
+    color: rgb(92, 92, 92);
+}
+.form-control > input {
+    flex: 9;
+    padding: 10px;
+    font-size: medium;
+    border: 1px solid rgb(170, 170, 170);
+    outline: none;
+}
+.form-control > button {
+    flex: 1;
 }

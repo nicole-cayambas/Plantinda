@@ -3,7 +3,7 @@
     <div class="forSpace"></div>
     <div class="filter-search-wrapper">
         <p>Search result for: Plant</p>
-        <div class="inline">
+        <div class="inline btns">
             <p>Sort</p>
             <a href="" class="sort-btn">Relevance</a>
             <a href="" class="sort-btn">Popular</a>
